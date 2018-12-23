@@ -6,4 +6,11 @@
       <password>${env.CI_DEPLOY_PASSWORD}</password>
     </server>
   </servers>
+  <repositories>
+    <repository>
+      <id>igniterealtime</id>
+      <name>Ignite Realtime Repository</name>
+      <url>http://igniterealtime.org/archiva/repository/maven/</url>
+    </repository>
+  </repositories>
 </settings>
