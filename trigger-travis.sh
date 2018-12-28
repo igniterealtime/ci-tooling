@@ -66,9 +66,11 @@ curl -s -X POST \
 
 if grep -q '"@type": "error"' /tmp/travis-request-output.$$.txt; then
     echo "Unexpected error while trying to trigger downstream project ${USER} ${REPO}"
+    cat /tmp/travis-request-output.$$.txt
     exit 1
 fi
 if grep -q 'access denied' /tmp/travis-request-output.$$.txt; then
     echo "Access Denied response while trying to trigger downstream project ${USER} ${REPO}"
+    cat /tmp/travis-request-output.$$.txt
     exit 1
 fi
