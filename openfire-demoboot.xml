@@ -4,5 +4,8 @@
     <className>org.jivesoftware.database.EmbeddedConnectionProvider</className>
   </connectionProvider>
   <setup>true</setup>
+  <xmpp>
+    <domain>example.org</domain>
+  </xmpp>
 </jive>
 
