@@ -15,7 +15,19 @@
       </activation>
 
       <repositories>
-        <!-- Where we obtain dependencies. -->
+        <!-- Many dependencies are not available in Ignite's repository. To shorten
+             the build time (due to many checks, resulting in 404's), force 'central'
+             to be used first, by explicitly declaring it on the top of the list. -->
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>Central Repository</name>
+          <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        
+        <!-- Where we obtain Ignite's dependencies. -->
         <repository>
           <id>igniterealtime</id>
           <name>Ignite Realtime Repository</name>
@@ -24,6 +36,21 @@
       </repositories>
 
       <pluginRepositories>
+        <!-- Many dependencies are not available in Ignite's repository. To shorten
+             the build time (due to many checks, resulting in 404's), force 'central'
+             to be used first, by explicitly declaring it on the top of the list. -->
+        <pluginRepository>
+          <releases>
+            <updatePolicy>never</updatePolicy>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>Central Repository</name>
+          <url>https://repo.maven.apache.org/maven2</url>
+        </pluginRepository>
+
         <!-- Typically used to retrieve Maven plugins used by this project from. This
          apparently is also used to obtain the dependencies _used by_ plugins
          (eg: openfire-plugin-assembly-descriptor) -->
