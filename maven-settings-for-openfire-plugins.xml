@@ -32,6 +32,9 @@
           <id>igniterealtime</id>
           <name>Ignite Realtime Repository</name>
           <url>https://igniterealtime.org/archiva/repository/maven/</url>
+          <snapshots>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
         </repository>
       </repositories>
 
@@ -58,6 +61,9 @@
           <id>igniterealtime</id>
           <name>Ignite Realtime Repository</name>
           <url>https://igniterealtime.org/archiva/repository/maven/</url>
+          <snapshots>
+            <updatePolicy>always</updatePolicy>
+          </snapshots>
         </pluginRepository>
       </pluginRepositories>
 
